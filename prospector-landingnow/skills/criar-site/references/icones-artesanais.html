@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Ícones artesanais LandingNow (referência de estilo)</title>
+<!--
+REFERÊNCIA DE ESTILO: ícones "desenhados à mão" em SVG multicamadas.
+Regras do estilo (adaptar as cores à marca de cada cliente):
+1. Cada ícone tem 3 camadas: sombra suave embaixo, corpo com GRADIENTE, brilho/reflexo em cima.
+2. Cores vivas com gradiente (nunca monocromático chapado), cantos arredondados, traço grosso.
+3. Um detalhe secundário em cor de contraste (bolinha, estrela, folha) pra dar personalidade.
+4. Fundo do ícone: quadradinho arredondado suave na cor clara da marca.
+NUNCA usar emoji, NUNCA usar ícone chapado de biblioteca. Desenhar variações destes para cada serviço.
+-->
+<style>
+  body{font-family:Segoe UI,Arial,sans-serif;background:#f4f7f5;padding:30px;display:flex;gap:22px;flex-wrap:wrap}
+  .box{width:120px;text-align:center;font-size:.8rem;color:#456}
+  .ic{width:92px;height:92px;border-radius:24px;background:#fff;box-shadow:0 10px 24px rgba(20,60,40,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+</style>
+</head>
+<body>
+
+<!-- 1. CONSULTA / ESTETOSCÓPIO -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#0f8a5f"/></linearGradient>
+  </defs>
+  <ellipse cx="32" cy="56" rx="20" ry="4" fill="#0f8a5f" opacity=".15"/>
+  <path d="M18 10v14a10 10 0 0020 0V10" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M28 34v6a12 12 0 0024 0v-4" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="52" cy="30" r="7" fill="url(#g1)"/>
+  <circle cx="52" cy="30" r="3" fill="#eafff4"/>
+  <circle cx="24" cy="14" r="2.4" fill="#ffd166"/>
+  <path d="M20 12c2-3 6-4 9-3" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7" fill="none"/>
+</svg>
+</div>Consulta</div>
+
+<!-- 2. NUTRIÇÃO / MAÇÃ -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a8a"/><stop offset="1" stop-color="#d63447"/></linearGradient>
+    <linearGradient id="g2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fe04a"/><stop offset="1" stop-color="#4f9e2f"/></linearGradient>
+  </defs>
+  <ellipse cx="32" cy="57" rx="18" ry="4" fill="#d63447" opacity=".15"/>
+  <path d="M32 20c-10-6-22 2-20 16 1.6 11 10 20 20 18 10 2 18.4-7 20-18 2-14-10-22-20-16z" fill="url(#g2)"/>
+  <path d="M32 20c0-6 3-9 7-10" stroke="#7a4a21" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M39 10c7-2 11 2 11 7-6 2-11-1-11-7z" fill="url(#g2b)"/>
+  <path d="M22 30c-2 3-3 7-2 11" stroke="#fff" stroke-width="3.4" stroke-linecap="round" opacity=".65" fill="none"/>
+</svg>
+</div>Nutrição</div>
+
+<!-- 3. ESPORTE / RAIO DE ENERGIA -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#f77f00"/></linearGradient>
+  </defs>
+  <ellipse cx="32" cy="57" rx="16" ry="4" fill="#f77f00" opacity=".18"/>
+  <path d="M36 6L16 36h12l-4 22 24-32H34z" fill="url(#g3)" stroke="#c95f00" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M33 12l-9 15" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <circle cx="49" cy="14" r="3" fill="#34d399"/>
+  <circle cx="14" cy="46" r="2.2" fill="#5aa9e6"/>
+</svg>
+</div>Energia</div>
+
+<!-- 4. ONLINE / NOTEBOOK -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5aa9e6"/><stop offset="1" stop-color="#2b6cb0"/></linearGradient>
+  </defs>
+  <ellipse cx="32" cy="57" rx="22" ry="4" fill="#2b6cb0" opacity=".15"/>
+  <rect x="12" y="12" width="40" height="28" rx="5" fill="url(#g4)"/>
+  <rect x="16" y="16" width="32" height="20" rx="3" fill="#eaf6ff"/>
+  <path d="M22 26l5 5 9-10" stroke="#0f8a5f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M8 46h48l-5 6H13z" fill="url(#g4)"/>
+  <rect x="27" y="47" width="10" height="3" rx="1.5" fill="#dbeeff"/>
+  <path d="M16 15l8-1" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".8"/>
+</svg>
+</div>Online</div>
+
+<!-- 5. LOCALIZAÇÃO / PIN -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#c026d3"/></linearGradient>
+  </defs>
+  <ellipse cx="32" cy="58" rx="12" ry="3.4" fill="#c026d3" opacity=".2"/>
+  <path d="M32 6C21 6 13 14 13 24c0 13 19 32 19 32s19-19 19-32C51 14 43 6 32 6z" fill="url(#g5)"/>
+  <circle cx="32" cy="23" r="8" fill="#fff"/>
+  <circle cx="32" cy="23" r="4" fill="#ffd166"/>
+  <path d="M20 15c2-4 6-6 9-6" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".65" fill="none"/>
+</svg>
+</div>Local</div>
+
+<!-- 6. PALESTRA / MICROFONE -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
+  </defs>
+  <ellipse cx="32" cy="58" rx="14" ry="3.4" fill="#6d28d9" opacity=".18"/>
+  <rect x="25" y="6" width="14" height="26" rx="7" fill="url(#g6)"/>
+  <path d="M17 26a15 15 0 0030 0" fill="none" stroke="url(#g6)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M32 42v10M24 54h16" stroke="url(#g6)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M28 10c1-2 4-3 6-2" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".75" fill="none"/>
+  <circle cx="44" cy="12" r="2.6" fill="#34d399"/>
+</svg>
+</div>Palestra</div>
+
+</body>
+</html>
