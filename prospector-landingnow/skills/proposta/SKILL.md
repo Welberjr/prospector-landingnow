@@ -10,16 +10,18 @@ A proposta vai por WhatsApp, nunca por e-mail. O usuário só copia a mensagem e
 ## Princípios
 
 - Tom pessoal, caloroso e BEM CURTO, sem travessões.
-- Não apontar defeitos do site atual do cliente. A página nova fala por si.
+- Dizer de onde encontrou o cliente (transparência gera confiança).
+- A melhoria é citada em UMA frase leve, como oportunidade, nunca como crítica ao profissional.
 - Preço e pagamento vêm do config (`venda.preco` e `venda.pagamento`).
-- Sempre abrir espaço para ajustes: atualizar fotos, mudar ou incluir informações fica por conta do usuário, sem custo citado.
+- Diferencial sempre presente: o trabalho vem pronto, e se o cliente não gostar, sai do ar sem compromisso.
 
-## Estrutura da mensagem
+## Estrutura da mensagem (5 partes)
 
-1. Saudação com o nome do cliente + apresentação do config (ex.: "Aqui é o Fulano, da Agência X").
-2. "Preparei uma versão nova do site de [negócio] e queria te mostrar:" + a URL publicada.
-3. "Se você gostar, a gente pode colocar no ar como site oficial. Fica R$ [preco], [pagamento]. E se quiser ajustar alguma coisa, atualizar as fotos ou incluir uma informação nova, pode deixar comigo também, sem problema."
-4. "Qualquer dúvida é só me chamar por aqui. Um abraço!"
+1. Saudação com o nome do cliente + apresentação do config (ex.: "Aqui é o Fulano, da Agência X (site da agência)").
+2. Onde achou: "Encontrei [negócio] no Google, pesquisando [nicho] em [região], e vi que [melhoria em uma frase leve, ex.: a página pode render mais no celular]."
+3. Diferencial + link: "Eu crio sites profissionais e trabalho diferente: em vez de prometer, eu faço primeiro e mostro pronto. A nova versão da página de vocês já está no ar:" + a URL publicada.
+4. Preço e garantia: "Se gostar, fica R$ [preco], [pagamento], com ajustes de fotos e textos por minha conta. Se não gostar, eu tiro do ar e está tudo certo, sem compromisso."
+5. "Um abraço!"
 
 ## Entrega ao usuário
 

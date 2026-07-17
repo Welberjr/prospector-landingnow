@@ -4,11 +4,15 @@ Plugin para Claude (Cowork / Claude Code) que roda o ciclo completo de prospecç
 
 **Achou → Criou → Publicou → Ofertou pelo WhatsApp.**
 
-1. `/setup`: configura tudo uma vez (seu nome, WhatsApp, preço, nichos e a conta Cloudflare).
-2. `/prospectar`: você escolhe o nicho na hora e ele busca negócios bem avaliados com sites fracos e WhatsApp público.
-3. `/criar-site`: cria a página nova no padrão LandingNow: fotos e logo reais do cliente, cards arredondados com neon, favicon, preview de WhatsApp e mobile impecável.
-4. `/publicar`: sobe no Cloudflare Pages (HTTPS grátis, URL `nome.pages.dev`) e valida.
-5. `/proposta`: entrega a mensagem de WhatsApp pronta, com o preço configurado, e o link da conversa do cliente. É só copiar e enviar.
+1. `/setup`: um formulário rápido no chat (nome, WhatsApp, preço, nichos, conta Cloudflare). Preencheu, salvou, nunca mais mexe.
+2. `/startlp`: o comando mágico. Roda tudo sozinho: prospecta no nicho que você escolher, cria as páginas, publica e te entrega as mensagens prontas.
+
+Ou, se preferir por etapas:
+
+3. `/prospectar`: você escolhe o nicho na hora e ele busca negócios bem avaliados com sites fracos e WhatsApp público.
+4. `/criar-site`: cria a página nova no padrão LandingNow: fotos e logo reais do cliente, cards arredondados com neon, favicon, preview de WhatsApp e mobile impecável.
+5. `/publicar`: sobe no Cloudflare Pages (HTTPS grátis, URL `nome.pages.dev`) e valida.
+6. `/proposta`: entrega a mensagem de WhatsApp pronta, com o preço configurado, e o link da conversa do cliente. É só copiar e enviar.
 
 ## Como instalar
 

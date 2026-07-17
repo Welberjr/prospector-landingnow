@@ -11,12 +11,13 @@ Configurar o ambiente uma única vez. Tudo fica salvo em `prospector-landingnow.
 
 1. **Pasta conectada**: verifique se há uma pasta do usuário conectada. Se não houver, peça para conectar uma (ex.: "Clientes"). Todos os sites e configurações ficam nela.
 2. **Config existente**: se `prospector-landingnow.json` já existir, mostre um resumo e pergunte o que atualizar.
-3. **Coletar dados** (perguntar em texto numerado, um bloco só):
+3. **Coletar dados com FORMULÁRIO INTERATIVO**: apresente um formulário no chat (AskUserQuestion ou o widget de formulário/elicitação, o que o ambiente oferecer) com estes campos, para o usuário preencher e confirmar de uma vez. Se o ambiente não suportar formulário, caia para perguntas em texto numerado num bloco só. Campos:
    - Nome completo e como quer se apresentar (ex.: "Welber, da LandingNow").
    - WhatsApp de contato do usuário.
    - Preço padrão da landing page e forma de pagamento (ex.: R$ 497 à vista no Pix).
    - Nichos padrão de prospecção (sugerir: nutricionistas, psicólogos, advogados, dentistas).
    - Cidade/região padrão.
+   Assim que o usuário confirmar, salve imediatamente no `prospector-landingnow.json` e mostre um resumo do que ficou gravado.
 4. **Wrangler/Cloudflare**: rode `wrangler --version` no PowerShell (Windows) ou terminal (Mac).
    - Se não existir: instrua `npm i -g wrangler` (precisa de Node.js).
    - Depois `wrangler login`: o USUÁRIO faz o login no navegador com a conta Cloudflare dele. Nunca peça senha no chat.
