@@ -32,6 +32,7 @@ NUNCA envie nada sem antes mostrar a lista do que vai sair e receber um "Sim" do
 - No máximo 5 envios por rodada e poucos por dia. Mensagem fria em volume derruba número no WhatsApp.
 - Sempre 1 a 1, com intervalo. Nunca disparo em massa, nunca lista de transmissão.
 - Se o WhatsApp Web mostrar qualquer aviso de bloqueio ou verificação, PARE imediatamente e avise o usuário.
+- HORÁRIO COMERCIAL apenas: verifique a hora local antes de oferecer o envio. Fora de segunda a sexta entre 9h e 18h (ou sábado de manhã), não ofereça enviar agora; ofereça agendar um lembrete (tarefa agendada do Cowork) para a próxima janela comercial, quando você pergunta de novo e, com o Sim, envia.
 
 ## Reforço por e-mail (opcional)
 

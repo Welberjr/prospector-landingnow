@@ -28,6 +28,9 @@ Estética:
 - Efeito neon em volta dos cards de destaque, sobre fundo escuro.
 - Rodapé centralizado (logo, navegação, redes).
 - Faixa de destaque do meio da página: SEMPRE com degradê nas cores da marca (fica bom em qualquer cliente). Foto de fundo nessa faixa é exceção: só com imagem de ambiente larga (1000px+) e nítida. Foto pequena, escura ou esticada nunca entra como fundo.
+- PROIBIDO emoji como ícone: todo ícone é SVG inline desenhado (WhatsApp, Instagram, Facebook, telefone, e-mail, endereço e ícones de serviço). Redes sociais sempre com o ícone oficial correspondente.
+- Link de ação dos cards: texto padrão "Saiba mais" (nunca "Saber mais"), ancorado na base do card, com todos os links na MESMA linha entre cards vizinhos (card em flex column, texto com flex 1, link com margin-top auto). Vale no desktop e no mobile.
+- Bloco de contato ("Fale com a gente"): seguir o layout do template-base, com o card branco de informações (ícones SVG em quadradinhos arredondados) ao lado do card degradê com CTA dourado. Nunca uma fileira solta de emojis.
 
 Mobile (sempre otimizado):
 - 100% responsivo, pensado primeiro no celular.
