@@ -1,6 +1,6 @@
 {
   "name": "prospector-landingnow",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "COMECE PELO /setup (formulário de 2 min, uma vez só). Depois /startlp roda tudo: prospecta clientes com sites fracos no nicho que você escolher, cria as páginas no padrão LandingNow, publica no Cloudflare Pages e, com a sua confirmação (\"Sim\"), envia as propostas pelo SEU WhatsApp Web, uma a uma. E-mail fica de reforço em rascunho com lembrete agendado. Comandos: /prospectar, /criar-site, /publicar, /proposta, /enviar.",
   "author": {
     "name": "Welber Junior (LandingNow)"

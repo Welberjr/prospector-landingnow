@@ -21,6 +21,7 @@ Texto:
 - NUNCA usar travessões (o traço longo). Vírgula, ponto ou parênteses no lugar.
 - Parágrafos justificados. Títulos centralizados no mobile.
 - Reescrever o conteúdo do cliente com outras palavras, mantendo o sentido.
+- JUSTIFICADO SEM RIOS: se a justificação criar espaços grandes entre palavras (coluna estreita/mobile), REESCREVA a frase sem mudar o sentido até a mancha ficar uniforme: palavras curtas no lugar de compridas (evite 12+ letras em coluna estreita) e frases longas quebradas em duas. Nunca resolva com espaçamento manual, hífen forçado ou fonte menor. Revise mentalmente o hero e os cards no mobile procurando esses buracos antes de entregar.
 
 Estética:
 - Visual moderno, cores vivas adaptadas à marca do cliente, alto contraste.
