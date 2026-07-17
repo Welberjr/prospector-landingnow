@@ -16,6 +16,10 @@ Ou, se preferir por etapas:
 7. `/proposta`: entrega a mensagem de WhatsApp pronta, com o preço configurado, e o link da conversa do cliente.
 8. `/enviar`: o Claude envia as mensagens pelo SEU WhatsApp Web, uma a uma. Antes de sair qualquer coisa, ele mostra a lista e pergunta "Posso enviar? Responda Sim". Você digita Sim e ele dispara, na quantidade que você escolheu.
 
+## O seu Painel (criado sozinho no /setup)
+
+Na instalação, o plugin cria o `painel.html` na sua pasta: o seu painel de controle, sem servidor e sem banco de dados. Dê dois cliques, entre com **admin / 12345678** e acompanhe tudo: quantos clientes catalogados, em produção, prontos, enviados e fechados, com filtros por nicho, cidade e status, busca por nome (pra nunca repetir cliente) e os links de cada site novo. O Claude atualiza o painel automaticamente a cada etapa do trabalho.
+
 ## Como funciona o envio (leia antes de usar o /enviar)
 
 - Nada sai sem você digitar **Sim**. O Claude sempre mostra quais clientes vão receber e espera a sua confirmação. Você fica no controle do que sai no seu nome.

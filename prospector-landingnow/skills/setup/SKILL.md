@@ -33,7 +33,8 @@ Configurar o ambiente uma única vez. Tudo fica salvo em `prospector-landingnow.
 }
 ```
 
-6. **Encerrar** explicando o ciclo: `/prospectar` acha os clientes, `/criar-site` monta a página, `/publicar` sobe no Cloudflare, `/proposta` entrega a mensagem de WhatsApp pronta.
+6. **PAINEL (criar automaticamente, sem perguntar)**: copie `skills/catalogo/references/painel-template.html` do plugin para a pasta conectada como `painel.html`. É o painel de controle local do usuário: arquivo único, sem servidor e sem banco, com os dados embutidos. Explique: "Criei o seu painel: dê dois cliques em painel.html na sua pasta. Login: admin | Senha: 12345678". O visual e o login são padrão para todos.
+7. **Encerrar** explicando o ciclo: `/prospectar` acha os clientes, `/criar-site` monta a página, `/publicar` sobe no Cloudflare, `/proposta` entrega a mensagem de WhatsApp pronta.
 
 ## Regras
 

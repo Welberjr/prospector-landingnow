@@ -24,7 +24,7 @@ NUNCA envie nada sem antes mostrar a lista do que vai sair e receber um "Sim" do
    - Aguarde a conversa carregar e CONFIRA na tela que o campo de texto está preenchido com a mensagem certa e que o contato é o certo.
    - Clique no botão de enviar.
    - Aguarde 30 a 60 segundos antes do próximo (padrão humano).
-   - Atualize o lead no `catalogo.md` para `enviado ✅` com a data (ou `proposta-enviada` no leads.md do fluxo antigo).
+   - Atualize o lead no `catalogo.md` para `enviado ✅` com a data e sincronize o `painel.html` (ou `proposta-enviada` no leads.md do fluxo antigo).
 3. Ao final, mostre o resumo: enviadas, falhas e o motivo de cada falha.
 
 ## Proteção da conta (limites fixos)

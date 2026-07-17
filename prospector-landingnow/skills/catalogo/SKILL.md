@@ -25,6 +25,10 @@ Status possíveis (nesta ordem de vida): `catalogado` > `em-producao` > `pronto`
 3. RANQUEIE a fila por potencial: melhor avaliação no Google + pior site + WhatsApp confirmado primeiro. A ordem da tabela É a ordem de produção.
 4. Mostre ao usuário o resumo: total na fila, os 10 primeiros da tabela e a pergunta: "Quantos você quer que eu produza agora?"
 
+## Painel (sincronização obrigatória)
+
+O `painel.html` da pasta conectada (criado no /setup a partir de `references/painel-template.html`) é a visão do usuário sobre o catálogo. SEMPRE que o catalogo.md mudar (lead novo, status, URL, envio, fechamento), reescreva o bloco `<script id="dados" type="application/json">...</script>` do painel.html com o JSON atualizado no formato: {"atualizado":"dd/mm/aaaa hh:mm","leads":[{"nome","nicho","cidade","nota","aval","whats","siteAtual","urlNova","status","enviadoEm"}]}. Se o painel.html não existir, crie a partir do template. Login padrão de todos: admin / 12345678 (informar ao usuário quando criar).
+
 ## Regras da fila
 
 - Nunca duplicar lead (conferir nome e WhatsApp antes de inserir).

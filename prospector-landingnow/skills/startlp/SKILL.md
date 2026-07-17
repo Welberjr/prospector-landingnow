@@ -24,4 +24,4 @@ Produzir landing pages seguindo a ORDEM do Catálogo (`catalogo.md`), sem retrab
 - A ordem do catálogo é sagrada: produza sempre os primeiros `catalogado` da tabela.
 - Trabalhe sem interromper com perguntas desnecessárias; reporte o progresso em frases curtas.
 - Nunca envie mensagem ao cliente final sem o "Sim" explícito do usuário.
-- Atualize o catalogo.md a cada mudança de status, na hora.
+- Atualize o catalogo.md E o painel.html (bloco JSON de dados, ver skill catalogo) a cada mudança de status, na hora.

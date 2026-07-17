@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel do Prospector</title>
+<style>
+  :root{--fundo:#0b1220;--card:#121a2b;--borda:#1e2a44;--neon:#7cffb2;--dourado:#ffd166;--texto:#e6edf7;--cinza:#8fa0b8;--azul:#5aa9e6}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#152238,var(--fundo) 60%);color:var(--texto);min-height:100vh}
+  .wrap{max-width:1200px;margin:0 auto;padding:26px 20px 60px}
+
+  /* LOGIN */
+  #login{position:fixed;inset:0;background:radial-gradient(900px 500px at 50% 20%,#152238,var(--fundo) 70%);display:flex;align-items:center;justify-content:center;z-index:99}
+  .lbox{background:var(--card);border:1px solid var(--borda);border-radius:22px;padding:38px 34px;width:340px;max-width:92vw;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .lbox input{width:100%;margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid var(--borda);background:#0d1526;color:var(--texto);font-size:.95rem}
+  .lbox button{width:100%;margin-top:16px;padding:12px;border:0;border-radius:12px;background:linear-gradient(135deg,var(--neon),#3ddc84);color:#06281a;font-weight:800;font-size:1rem;cursor:pointer}
+  .lbox .erro{color:#ff8a8a;font-size:.85rem;margin-top:10px;display:none}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;margin-bottom:8px}
+  .logo svg{filter:drop-shadow(0 0 10px rgba(124,255,178,.5))}
+  .lbox p{color:var(--cinza);font-size:.85rem;margin-top:6px}
+
+  /* HEADER */
+  header{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+  header .sub{color:var(--cinza);font-size:.88rem}
+  .divisoria{height:2px;border:0;border-radius:2px;background:linear-gradient(90deg,transparent,var(--neon) 50%,transparent);box-shadow:0 0 12px rgba(124,255,178,.7),0 0 30px rgba(124,255,178,.35);margin:4px 0 22px}
+
+  /* KPIs */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:22px}
+  .kpi{background:var(--card);border:1px solid var(--borda);border-radius:16px;padding:16px;text-align:center}
+  .kpi b{display:block;font-size:1.7rem;color:var(--neon)}
+  .kpi span{font-size:.78rem;color:var(--cinza);text-transform:uppercase;letter-spacing:.08em}
+  .kpi.gold b{color:var(--dourado)}
+
+  /* FILTROS */
+  .filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .filtros select,.filtros input{padding:10px 12px;border-radius:12px;border:1px solid var(--borda);background:var(--card);color:var(--texto);font-size:.9rem}
+  .filtros input{flex:1;min-width:200px}
+
+  /* TABELA */
+  .tabela{background:var(--card);border:1px solid var(--borda);border-radius:18px;overflow:auto}
+  table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:900px}
+  th{position:sticky;top:0;background:#0f1728;color:var(--cinza);text-transform:uppercase;font-size:.72rem;letter-spacing:.1em;padding:12px 10px;text-align:left;border-bottom:1px solid var(--borda)}
+  td{padding:11px 10px;border-bottom:1px solid #16203a;vertical-align:top}
+  tr:hover td{background:#0f1830}
+  td a{color:var(--azul);text-decoration:none}
+  td a:hover{text-decoration:underline}
+  .badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:.75rem;font-weight:700;white-space:nowrap}
+  .b-catalogado{background:#1e2a44;color:#9fb4d8}
+  .b-em-producao{background:#3a2f10;color:var(--dourado)}
+  .b-pronto{background:#12324a;color:#7cc7ff}
+  .b-enviado{background:#0f3a24;color:var(--neon)}
+  .b-respondeu{background:#2a1a3a;color:#c9a2f0}
+  .b-fechou{background:linear-gradient(135deg,var(--dourado),#c98f1a);color:#241a05}
+  .b-descartado{background:#2a1520;color:#c88}
+  .vazio{padding:40px;text-align:center;color:var(--cinza)}
+  footer{margin-top:18px;text-align:center;color:var(--cinza);font-size:.8rem}
+  @media(max-width:700px){.kpis{grid-template-columns:repeat(2,1fr)}.kpis .kpi:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<div id="login">
+  <div class="lbox">
+    <div class="logo"><svg width="34" height="34" viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cffb2"/><stop offset="1" stop-color="#2f9e63"/></linearGradient></defs><rect x="4" y="4" width="56" height="56" rx="16" fill="url(#lg)"/><path d="M20 44V20h12a8 8 0 010 16h-8" fill="none" stroke="#06281a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="44" r="4" fill="#06281a"/></svg> Painel do Prospector</div>
+    <p>Entre para acompanhar a sua fila de clientes</p>
+    <input id="usu" placeholder="Usuário" autocomplete="off">
+    <input id="sen" type="password" placeholder="Senha">
+    <button onclick="entrar()">Entrar</button>
+    <div class="erro" id="erro">Usuário ou senha errados. Padrão: admin / 12345678</div>
+  </div>
+</div>
+
+<div class="wrap" id="app" style="display:none">
+  <header>
+    <div class="logo"><svg width="30" height="30" viewBox="0 0 64 64"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cffb2"/><stop offset="1" stop-color="#2f9e63"/></linearGradient></defs><rect x="4" y="4" width="56" height="56" rx="16" fill="url(#lg2)"/><path d="M20 44V20h12a8 8 0 010 16h-8" fill="none" stroke="#06281a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="44" cy="44" r="4" fill="#06281a"/></svg> Painel do Prospector</div>
+    <div class="sub" id="atualizado"></div>
+  </header>
+  <hr class="divisoria">
+
+  <div class="kpis">
+    <div class="kpi"><b id="k-total">0</b><span>Catalogados</span></div>
+    <div class="kpi"><b id="k-prod">0</b><span>Em produção</span></div>
+    <div class="kpi"><b id="k-pronto">0</b><span>Prontos</span></div>
+    <div class="kpi"><b id="k-env">0</b><span>Enviados</span></div>
+    <div class="kpi gold"><b id="k-fechou">0</b><span>Fechados</span></div>
+  </div>
+
+  <div class="filtros">
+    <select id="f-nicho"><option value="">Todos os nichos</option></select>
+    <select id="f-cidade"><option value="">Todas as cidades</option></select>
+    <select id="f-status">
+      <option value="">Todos os status</option>
+      <option>catalogado</option><option>em-producao</option><option>pronto</option>
+      <option>enviado</option><option>respondeu</option><option>fechou</option><option>descartado</option>
+    </select>
+    <input id="f-busca" placeholder="Buscar por nome (pra não repetir cliente)...">
+  </div>
+
+  <div class="tabela">
+    <table>
+      <thead><tr><th>#</th><th>Nome</th><th>Nicho</th><th>Cidade</th><th>Nota</th><th>Aval.</th><th>WhatsApp</th><th>Site atual</th><th>Site novo</th><th>Status</th><th>Enviado em</th></tr></thead>
+      <tbody id="linhas"></tbody>
+    </table>
+    <div class="vazio" id="vazio" style="display:none">Nada por aqui ainda. Rode /catalogo no Claude para abastecer a fila.</div>
+  </div>
+  <footer>Atualizado automaticamente pelo Claude a cada etapa do trabalho. Login padrão: admin / 12345678</footer>
+</div>
+
+<script id="dados" type="application/json">
+{"atualizado":"","leads":[]}
+</script>
+
+<script>
+function entrar(){
+  var u=document.getElementById('usu').value.trim(), s=document.getElementById('sen').value;
+  if(u==='admin' && s==='12345678'){ sessionStorage.setItem('prospector_ok','1'); abrir(); }
+  else document.getElementById('erro').style.display='block';
+}
+function abrir(){ document.getElementById('login').style.display='none'; document.getElementById('app').style.display='block'; render(); }
+document.getElementById('sen').addEventListener('keydown',function(e){ if(e.key==='Enter') entrar(); });
+
+var DADOS=JSON.parse(document.getElementById('dados').textContent||'{"leads":[]}');
+var L=DADOS.leads||[];
+
+function opcoes(id,campo){
+  var sel=document.getElementById(id), vistos={};
+  L.forEach(function(x){ var v=(x[campo]||'').trim(); if(v && !vistos[v]){ vistos[v]=1; var o=document.createElement('option'); o.textContent=v; sel.appendChild(o); } });
+}
+opcoes('f-nicho','nicho'); opcoes('f-cidade','cidade');
+['f-nicho','f-cidade','f-status','f-busca'].forEach(function(id){ document.getElementById(id).addEventListener('input',render); });
+
+function badge(st){
+  st=(st||'catalogado').toLowerCase();
+  var cls='b-catalogado', txt=st;
+  if(st.indexOf('produ')>=0){cls='b-em-producao';txt='em produção'}
+  else if(st.indexOf('pronto')>=0){cls='b-pronto';txt='pronto'}
+  else if(st.indexOf('enviado')>=0){cls='b-enviado';txt='enviado ✔'}
+  else if(st.indexOf('respondeu')>=0){cls='b-respondeu';txt='respondeu'}
+  else if(st.indexOf('fechou')>=0){cls='b-fechou';txt='fechou ★'}
+  else if(st.indexOf('descart')>=0){cls='b-descartado';txt='descartado'}
+  else txt='catalogado';
+  return '<span class="badge '+cls+'">'+txt+'</span>';
+}
+function render(){
+  var n=document.getElementById('f-nicho').value, c=document.getElementById('f-cidade').value,
+      s=document.getElementById('f-status').value, b=document.getElementById('f-busca').value.toLowerCase();
+  var tb=document.getElementById('linhas'); tb.innerHTML='';
+  var mostrados=0;
+  L.forEach(function(x,i){
+    var st=(x.status||'catalogado').toLowerCase();
+    if(n && (x.nicho||'')!==n) return;
+    if(c && (x.cidade||'')!==c) return;
+    if(s && st.indexOf(s)<0) return;
+    if(b && (x.nome||'').toLowerCase().indexOf(b)<0) return;
+    mostrados++;
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td>'+(i+1)+'</td><td><b>'+(x.nome||'')+'</b></td><td>'+(x.nicho||'')+'</td><td>'+(x.cidade||'')+'</td>'+
+      '<td>'+(x.nota||'')+'</td><td>'+(x.aval||'')+'</td>'+
+      '<td>'+(x.whats?'<a href="https://wa.me/'+x.whats+'" target="_blank">'+x.whats+'</a>':'')+'</td>'+
+      '<td>'+(x.siteAtual?'<a href="'+x.siteAtual+'" target="_blank">abrir</a>':'')+'</td>'+
+      '<td>'+(x.urlNova?'<a href="'+x.urlNova+'" target="_blank">abrir</a>':'')+'</td>'+
+      '<td>'+badge(st)+'</td><td>'+(x.enviadoEm||'')+'</td>';
+    tb.appendChild(tr);
+  });
+  document.getElementById('vazio').style.display = mostrados? 'none':'block';
+  function conta(f){ return L.filter(f).length; }
+  document.getElementById('k-total').textContent = L.filter(function(x){return (x.status||'').indexOf('descart')<0}).length;
+  document.getElementById('k-prod').textContent = conta(function(x){return (x.status||'').indexOf('produ')>=0});
+  document.getElementById('k-pronto').textContent = conta(function(x){return (x.status||'').indexOf('pronto')>=0});
+  document.getElementById('k-env').textContent = conta(function(x){return (x.status||'').indexOf('enviado')>=0||(x.status||'').indexOf('respondeu')>=0||(x.status||'').indexOf('fechou')>=0});
+  document.getElementById('k-fechou').textContent = conta(function(x){return (x.status||'').indexOf('fechou')>=0});
+  document.getElementById('atualizado').textContent = DADOS.atualizado? ('Atualizado em '+DADOS.atualizado) : '';
+}
+if(sessionStorage.getItem('prospector_ok')==='1') abrir();
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "name": "prospector-landingnow",
-  "version": "1.9.0",
-  "description": "COMECE PELO /setup (formulário de 2 min). Depois: /catalogo monta a fila de clientes (prospecção em volume, tabela ranqueada, acumulativa) e /startlp produz na ordem: você diz quantos (3, 5...), ele cria as páginas no padrão LandingNow, publica no Cloudflare e entrega as mensagens de WhatsApp; com o seu Sim, envia pelo seu WhatsApp Web e marca o check na fila. Comandos: /catalogo, /startlp, /prospectar, /criar-site, /publicar, /proposta, /enviar.",
+  "version": "2.0.0",
+  "description": "COMECE PELO /setup (formulário de 2 min): ele já cria o SEU PAINEL local (painel.html, login admin / 12345678), sem servidor e sem banco. Depois: /catalogo monta a fila ranqueada de clientes e /startlp produz na ordem (você diz quantos), publica no Cloudflare e entrega as mensagens de WhatsApp; com o seu Sim, envia pelo seu WhatsApp Web e marca tudo no painel: catalogado, pronto, enviado, fechou. Comandos: /catalogo, /startlp, /prospectar, /criar-site, /publicar, /proposta, /enviar.",
   "author": {
     "name": "Welber Junior (LandingNow)"
   },
