@@ -36,6 +36,7 @@ Estética:
 Mobile (sempre otimizado):
 - 100% responsivo, pensado primeiro no celular.
 - Grade 2x2 SOMENTE para itens curtos (números, tags de 1 a 3 palavras, selos, convênios). Card com parágrafo descritivo ocupa a linha inteira no mobile: texto espremido com 1 ou 2 letras por linha é PROIBIDO.
+- EFEITO CARDS EMPILHADOS (obrigatório no mobile): listas de cards com parágrafo (diferenciais, serviços/planos) usam sticky stack em CSS puro: container display block; cada card position sticky com top escalonado (88px, 104px, 120px..., degrau de 16px, começando abaixo do header) e margem inferior de 18px. Rolando, cada card gruda e o próximo sobe por cima deixando a beiradinha do anterior; rolando pra cima, reverte sozinho. Ver o bloco pronto no @media do template-base. Desktop fica em grade normal.
 - Botões da primeira dobra lado a lado, nunca empilhados.
 - Sem poluição de botões (um CTA de WhatsApp no hero basta, mais o flutuante).
 - Botão flutuante do WhatsApp com espaço extra no rodapé para não cobrir texto.

@@ -174,10 +174,22 @@
     .nav-links{display:none}
     .hero .cta-row{flex-wrap:nowrap}
     .hero .cta-row .btn{flex:1;padding-left:14px;padding-right:14px;font-size:.95rem;text-align:center}
-    .cards3,.planos{grid-template-columns:1fr}
+    /* CARDS EMPILHADOS (sticky stack): cada card gruda no topo e o proximo sobe por cima,
+       deixando uma beiradinha do anterior. Reversivel ao rolar pra cima. So no mobile. */
+    .cards3,.planos{display:block}
+    .card{position:sticky;max-width:460px;width:100%;margin:0 auto 18px;box-shadow:0 -10px 30px rgba(12,74,52,.16),var(--sombra)}
+    .cards3 .card:nth-child(1){top:88px}
+    .cards3 .card:nth-child(2){top:104px}
+    .cards3 .card:nth-child(3){top:120px}
+    .cards3 .card:nth-child(4){top:136px}
+    .plano{position:sticky;max-width:420px;width:100%;margin:0 auto 18px}
+    .planos .plano:nth-child(1){top:88px}
+    .planos .plano:nth-child(2){top:104px}
+    .planos .plano:nth-child(3){top:120px}
+    .planos .plano:nth-child(4){top:136px}
+    .planos .plano:nth-child(5){top:152px}
+    .planos .plano:nth-child(6){top:168px}
     .conv{grid-template-columns:repeat(2,1fr)}
-    .card{max-width:460px;margin:0 auto}
-    .plano{max-width:420px;margin:0 auto}
     footer{padding-bottom:104px}
   }
 </style>
