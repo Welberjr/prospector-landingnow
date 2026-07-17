@@ -25,7 +25,7 @@ Para cada negócio encontrado, abra o site e avalie:
 
 ## Coleta por lead (obrigatório)
 
-Nome, cidade, site atual, motivo objetivo, e **WhatsApp no formato 55 + DDD + número** (procure `wa.me/`, `api.whatsapp.com` ou telefone celular no site). A proposta vai por WhatsApp: lead sem WhatsApp público não fecha o ciclo, registre e descarte. E-mail e Instagram são extras bem-vindos.
+Nome, cidade, site atual, motivo objetivo, **NOTA do Google e número de avaliações** (do painel do negócio na busca ou no Maps; se não achar, registrar "sem nota") e **WhatsApp no formato 55 + DDD + número** (procure `wa.me/`, `api.whatsapp.com` ou telefone celular no site). A proposta vai por WhatsApp: lead sem WhatsApp público não fecha o ciclo, registre e descarte. E-mail e Instagram são extras bem-vindos.
 
 ## Saída
 

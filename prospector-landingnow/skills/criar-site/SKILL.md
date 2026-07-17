@@ -42,6 +42,10 @@ Mobile (sempre otimizado):
 - Sem poluição de botões (um CTA de WhatsApp no hero basta, mais o flutuante).
 - Botão flutuante do WhatsApp com espaço extra no rodapé para não cobrir texto.
 
+Selo Google (prova social):
+- Se o catálogo tiver nota e avaliações do lead, aplicar a regra fixa: nota 4,9 ou 5,0 com menos de 30 avaliações mostra só a nota ("★ 5,0 no Google"); nota 4,0+ com 30+ avaliações mostra nota e quantidade ("★ 4,6 no Google · 47 avaliações"); fora disso, não exibir selo. Nunca inventar números.
+- O selo é um chip no hero (ao lado do selo de localização), com estrela dourada em SVG desenhado. Ex.: <span class="selo"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 17l-5.9 3.2 1.3-6.6L2.5 9l6.6-.8z" fill="#ffd166"/></svg> 5,0 no Google</span>. Nota com vírgula.
+
 Contato:
 - Botão flutuante e CTAs em `wa.me/55DDDNUMERO` com mensagem pré-preenchida.
 - Redes sociais reais do cliente no contato e no rodapé.

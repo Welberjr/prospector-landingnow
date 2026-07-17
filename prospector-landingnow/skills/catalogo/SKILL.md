@@ -13,7 +13,7 @@ O Catálogo separa a garimpagem da produção: primeiro se prospecta em volume e
 # Catálogo de leads: [nicho] em [cidade]
 Atualizado em [data]. Qualificados: N | Prontos: N | Enviados: N
 
-| # | Nome | Cidade | WhatsApp | Site atual | Motivo | Status | URL nova | Enviado em |
+| # | Nome | Cidade | Nota | Aval. | WhatsApp | Site atual | Motivo | Status | URL nova | Enviado em |
 ```
 
 Status possíveis (nesta ordem de vida): `catalogado` > `em-producao` > `pronto` > `enviado ✅` > `respondeu` > `fechou 🏆`. Leads descartados entram no fim da tabela com `descartado` e o motivo, para nunca serem reavaliados.
