@@ -16,7 +16,7 @@ Produzir landing pages seguindo a ORDEM do Catálogo (`catalogo.md`), sem retrab
 3. **Quantidade**: pergunte "Quantos você quer que eu produza agora?" (sugira 3). O usuário escolhe N.
 4. **Produção em ordem**: pegue os N primeiros com status `catalogado` e, um por vez: marque `em-producao`, execute `criar-site`, depois `publicar`, depois `proposta`, e marque `pronto` com a URL nova na tabela. Se um lead falhar (ex.: imagens inacessíveis), registre o motivo, marque `descartado` e puxe o próximo da fila para completar N.
 5. **Entrega**: resumo com, por cliente: nome, URL no ar, link wa.me e mensagem pronta.
-6. **Oferta de envio**: em horário comercial, pergunte "Tenho [N] mensagens prontas: [nomes]. Posso enviar pelo seu WhatsApp? Responda Sim." Com o Sim, execute a skill `enviar` (que marca o ✅ `enviado` no catálogo com a data). Fora do horário, ofereça agendar o lembrete.
+6. **Oferta de envio**: dentro das janelas de envio da skill `enviar` (dia útil, preferindo 8h30 às 11h30 e 14h30 às 17h), pergunte "Tenho [N] mensagens prontas: [nomes]. Posso enviar pelo seu WhatsApp? Responda Sim." Com o Sim, execute a skill `enviar` (que marca o ✅ `enviado` no catálogo com a data). Fora do horário, ofereça agendar o lembrete.
 7. **Continuação**: quando o usuário pedir "mais" (ex.: "faz mais 5"), volte ao passo 4 e continue DO PONTO onde a fila parou. Quando a fila baixar de 5 leads, avise e ofereça rodar `/catalogo` para reabastecer.
 
 ## Regras

@@ -32,7 +32,7 @@ NUNCA envie nada sem antes mostrar a lista do que vai sair e receber um "Sim" do
 - No máximo 5 envios por rodada e poucos por dia. Mensagem fria em volume derruba número no WhatsApp.
 - Sempre 1 a 1, com intervalo. Nunca disparo em massa, nunca lista de transmissão.
 - Se o WhatsApp Web mostrar qualquer aviso de bloqueio ou verificação, PARE imediatamente e avise o usuário.
-- HORÁRIO COMERCIAL apenas: verifique a hora local antes de oferecer o envio. Fora de segunda a sexta entre 9h e 18h (ou sábado de manhã), não ofereça enviar agora; ofereça agendar um lembrete (tarefa agendada do Cowork) para a próxima janela comercial, quando você pergunta de novo e, com o Sim, envia.
+- JANELAS DE ENVIO (verifique a hora local antes de oferecer): permitido apenas em dia útil, entre 8h e 18h. E dentro disso existem as JANELAS PREFERENCIAIS: das 8h30 às 11h30 e das 14h30 às 17h. O porquê: logo na abertura a pessoa está chegando e arrumando as coisas, e no fim do dia está de saída, então a mensagem morre. Se estiver dentro do comercial mas fora da janela preferencial (ex.: 8h10, 12h30, 17h40), avise o usuário e sugira aguardar a próxima janela (ofereça agendar); só envie na hora se ele insistir. Fora do comercial, não ofereça envio: ofereça agendar um lembrete (tarefa agendada do Cowork) para a próxima janela preferencial, quando você pergunta de novo e, com o Sim, envia.
 
 ## Reforço por e-mail (opcional)
 
