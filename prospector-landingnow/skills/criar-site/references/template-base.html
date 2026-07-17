@@ -75,7 +75,7 @@
   .card h3{font-size:1.2rem;margin-bottom:10px}
   .card p{color:var(--cinza);font-size:.98rem}
 
-  /* FAIXA DESTAQUE (degradê nas cores da marca; foto de fundo SÓ se houver imagem larga e de qualidade) */
+  /* FAIXA DESTAQUE: degradê da marca por padrão; foto SÓ com imagem larga (1000px+) e nítida */
   .ambiente{position:relative;min-height:280px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(140deg,var(--verde-esc),var(--verde) 55%,#12a06d)}
   .ambiente:before{content:"";position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 66%);border-radius:50%}
   .ambiente:after{content:"";position:absolute;bottom:-120px;left:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(232,185,35,.22),transparent 66%);border-radius:50%}
@@ -143,14 +143,25 @@
   .mapa h3{font-size:1.5rem;margin-bottom:10px}
   .mapa p{color:#e2f4ea;margin-bottom:22px}
 
-  /* RODAPE (centralizado) */
-  footer{background:#08281d;color:#c8d8d0;padding:38px 0 42px}
-  .foot{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
-  .foot .chip{background:#fff;border-radius:14px;padding:10px 16px}
-  .foot .chip img{height:36px;width:auto}
-  .foot .fnav{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;font-size:.9rem}
-  .foot .fnav a:hover{color:var(--neon)}
-  .foot small{max-width:560px;color:#8aa093;border-top:1px solid #133a2c;padding-top:18px;font-size:.82rem}
+  /* RODAPE RICO horizontal: logo+frase+redes centralizados, 3 colunas lado a lado
+     (MANTÉM 3 colunas no mobile), títulos caps na cor neon e DIVISÓRIA DE LUZ antes dos direitos */
+  .cta-solo{max-width:760px;margin:0 auto}
+  footer{position:relative;background:linear-gradient(160deg,#06231a,#0a4634 60%,#0f6a4e);color:#cfe4d8;padding:52px 0 26px;overflow:hidden}
+  footer:before{content:"";position:absolute;top:-120px;right:-100px;width:360px;height:360px;background:radial-gradient(circle,rgba(163,255,94,.16),transparent 66%);border-radius:50%}
+  footer:after{content:"";position:absolute;bottom:-140px;left:-90px;width:320px;height:320px;background:radial-gradient(circle,rgba(232,185,35,.14),transparent 66%);border-radius:50%}
+  .f-brand{position:relative;text-align:center;padding-bottom:28px}
+  .f-brand .chip{display:inline-block;background:#fff;border-radius:14px;padding:10px 16px;margin-bottom:14px}
+  .f-brand .chip img{height:34px;width:auto}
+  .f-brand p{font-size:.94rem;color:#a9c9ba;max-width:440px;margin:0 auto 18px;text-align:center}
+  footer .redes{display:flex;gap:10px;justify-content:center}
+  footer .redes a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);transition:transform .18s,background .18s}
+  footer .redes a:hover{transform:translateY(-3px);background:rgba(163,255,94,.2)}
+  .foot-cols{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto;padding:8px 0 30px}
+  .foot-cols h4{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--neon);margin-bottom:12px;font-weight:800}
+  .foot-cols ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:.92rem;color:#cfe4d8}
+  .foot-cols a:hover{color:var(--neon)}
+  .divisoria{position:relative;height:2px;border:0;border-radius:2px;background:linear-gradient(90deg,transparent,var(--neon) 50%,transparent);box-shadow:0 0 12px rgba(163,255,94,.7),0 0 32px rgba(163,255,94,.35)}
+  footer small{position:relative;display:block;text-align:center;color:#8fae9d;padding-top:20px;font-size:.84rem}
 
   /* WHATSAPP FLUTUANTE */
   .zap{position:fixed;bottom:22px;right:22px;z-index:80;background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(37,211,102,.5);animation:pulse 2.2s infinite}
@@ -174,8 +185,7 @@
     .nav-links{display:none}
     .hero .cta-row{flex-wrap:nowrap}
     .hero .cta-row .btn{flex:1;padding-left:14px;padding-right:14px;font-size:.95rem;text-align:center}
-    /* CARDS EMPILHADOS (sticky stack): cada card gruda no topo e o proximo sobe por cima,
-       deixando uma beiradinha do anterior. Reversivel ao rolar pra cima. So no mobile. */
+    /* CARDS EMPILHADOS (sticky stack) no mobile */
     .cards3,.planos{display:block}
     .card{position:sticky;max-width:460px;width:100%;margin:0 auto 18px;box-shadow:0 -10px 30px rgba(12,74,52,.16),var(--sombra)}
     .cards3 .card:nth-child(1){top:88px}
@@ -189,6 +199,8 @@
     .planos .plano:nth-child(4){top:136px}
     .planos .plano:nth-child(5){top:152px}
     .planos .plano:nth-child(6){top:168px}
+    .foot-cols{gap:12px}
+    .foot-cols ul{font-size:.84rem}
     .conv{grid-template-columns:repeat(2,1fr)}
     footer{padding-bottom:104px}
   }
@@ -257,9 +269,8 @@
 </section>
 
 <section class="ambiente">
-  <!-- REGRA: por padrão esta faixa NÃO leva foto (o degradê da marca resolve para qualquer cliente).
-       Só acrescente <img src="img/ambiente.jpg"> + <div class="ov"></div> aqui se o cliente tiver
-       foto de ambiente LARGA (1000px+) e de boa qualidade. Foto ruim degrada a página inteira. -->
+  <!-- REGRA: por padrão SEM foto (o degradê da marca serve a qualquer cliente). Só inclua
+       <img src="img/ambiente.jpg"> + <div class="ov"></div> se houver foto LARGA (1000px+) e nítida. -->
   <div class="txt">
     <h2>Um espaço pensado para o seu <span style="color:#d9f99d">bem estar</span></h2>
     <p>Ambiente acolhedor e confortável no Águas Claras Shopping, para você se sentir bem cuidada em cada consulta.</p>
@@ -311,4 +322,91 @@
       </div>
       <div class="plano">
         <div class="capa"><span class="tag">Adolescentes</span><img src="img/nutritteens.png" alt="Plano Nutrit Teens"></div>
-        <di
+        <div class="corpo"><h3>Nutrit Teens</h3><p>Orientação nutricional pensada para a rotina e as necessidades de adolescentes e jovens.</p><a class="mini" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Nutrit%20Teens." target="_blank" rel="noopener">Quero este plano &rarr;</a></div>
+      </div>
+      <div class="plano">
+        <div class="capa"><span class="tag">Família</span><img src="img/nutritfamily.png" alt="Plano Nutrit Family"></div>
+        <div class="corpo"><h3>Nutrit Family</h3><p>Orientação nutricional para toda a família de uma vez só, no mesmo cuidado e no mesmo ritmo.</p><a class="mini" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Nutrit%20Family." target="_blank" rel="noopener">Quero este plano &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="psi">
+  <div class="wrap">
+    <div class="faixa">
+      <h3>Nutrição e Psicologia no mesmo cuidado</h3>
+      <p>Além do acompanhamento nutricional, a Clínica Nutrit oferece atendimento psicológico. Alguns dos nossos profissionais de psicologia também atendem por diversos convênios, para você cuidar da mente e do corpo de forma integrada.</p>
+      <div class="conv">
+        <span>GDF Saúde</span><span>Saúde Caixa</span><span>SERPRO</span><span>BACEN</span>
+        <span>Pró-Social TRF</span><span>Pró-Saúde Câmara</span><span>CAESAN</span><span>Life Empresarial</span>
+        <span>Omint Saúde</span><span>Care Plus</span><span>PF Saúde</span><span>e outros</span>
+      </div>
+      <div style="margin-top:26px">
+        <a class="btn gold" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20atendimentos%20de%20psicologia%20e%20conv%C3%AAnios." target="_blank" rel="noopener">Consultar psicologia e convênios</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="agendar">
+  <div class="wrap">
+    <h2>Vamos <span>cuidar de você</span></h2>
+    <p class="sub">Estamos no Águas Claras Shopping. Fale com a gente e agende a sua consulta.</p>
+    <div class="mapa cta-solo">
+      <h3>Pronta para começar?</h3>
+      <p>Agende agora pelo WhatsApp e dê o primeiro passo para uma vida mais saudável e equilibrada.</p>
+      <a class="btn gold" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar minha consulta</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="f-brand">
+      <div class="chip"><img src="img/logo.png" alt="Clínica Nutrit"></div>
+      <p>Nutrição e Psicologia em Águas Claras, Brasília. Cuidado personalizado para cada fase da sua vida.</p>
+      <div class="redes">
+        <a href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="21" height="21" viewBox="0 0 24 24" fill="#e7f6ee"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.1-.1 3.4a9.3 9.3 0 003.8 3.4c1.3.6 1.9.6 2.6.5.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.4-.2z"/></svg></a>
+        <a href="https://www.instagram.com/clinica_nutrit/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#e7f6ee" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#e7f6ee" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="#e7f6ee"/></svg></a>
+        <a href="https://www.facebook.com/clinicanutrit" target="_blank" rel="noopener" aria-label="Facebook"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2c-2 0-3 1.3-3 3.2V10H9v3h2v6h3v-6h2l.6-3H14V8.6c0-.4.3-.6.7-.6z" fill="#e7f6ee"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#dif">Diferenciais</a></li>
+          <li><a href="#formacao">Profissional</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#agendar">Agendar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5561991167868" target="_blank" rel="noopener">61 99116-7868</a></li>
+          <li><a href="mailto:atendimento@clinicanutrit.com.br">atendimento@clinicanutrit.com.br</a></li>
+          <li><a href="https://www.instagram.com/clinica_nutrit/" target="_blank" rel="noopener">@clinica_nutrit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Onde estamos</h4>
+        <ul>
+          <li>Águas Claras Shopping, Sala 455</li>
+          <li>Águas Claras, Brasília, DF</li>
+          <li>Presencial e acolhedor</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="divisoria">
+    <small>Clínica Nutrit, Nutrição e Psicologia em Águas Claras, Brasília. Todos os direitos reservados.</small>
+  </div>
+</footer>
+
+<a class="zap" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.1-.1 3.4a9.3 9.3 0 003.8 3.4c1.3.6 1.9.6 2.6.5.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.1-.4-.2z"/></svg>
+</a>
+
+</body>
+</html>
