@@ -4,13 +4,29 @@
 <meta charset="UTF-8">
 <title>Ícones artesanais LandingNow (referência de estilo)</title>
 <!--
-REFERÊNCIA DE ESTILO: ícones "desenhados à mão" em SVG multicamadas.
-Regras do estilo (adaptar as cores à marca de cada cliente):
-1. Cada ícone tem 3 camadas: sombra suave embaixo, corpo com GRADIENTE, brilho/reflexo em cima.
-2. Cores vivas com gradiente (nunca monocromático chapado), cantos arredondados, traço grosso.
-3. Um detalhe secundário em cor de contraste (bolinha, estrela, folha) pra dar personalidade.
-4. Fundo do ícone: quadradinho arredondado suave na cor clara da marca.
-NUNCA usar emoji, NUNCA usar ícone chapado de biblioteca. Desenhar variações destes para cada serviço.
+REFERÊNCIA DE ESTILO: ícones "desenhados à mão" em SVG multicamadas, PARA QUALQUER NICHO.
+
+ANATOMIA DO ÍCONE (a receita: siga isto para desenhar o ícone de QUALQUER serviço, de qualquer nicho):
+1. SOMBRA: uma ellipse achatada na base (opacity .15 a .2, na cor escura do gradiente). Dá o "apoio no chão".
+2. CORPO: o objeto principal do serviço, desenhado com formas simples e cantos arredondados,
+   preenchido com linearGradient de 2 tons VIVOS (claro no topo-esquerda, escuro na base-direita).
+   Traços com stroke-width 4 a 6 e stroke-linecap round.
+3. BRILHO: um traço branco curto e curvo (opacity .6 a .8) no topo-esquerda do corpo. Dá o volume.
+4. DETALHE DE PERSONALIDADE: 1 ou 2 elementos pequenos em cor de CONTRASTE fora da paleta do corpo
+   (bolinha, estrela, faísca, folha, coração). É o que tira a cara de biblioteca.
+5. FUNDO: quadradinho arredondado (border-radius ~24px) branco ou na cor clara da marca, com sombra suave.
+
+COMO ESCOLHER O OBJETO POR NICHO (desenhe o SÍMBOLO DO SERVIÇO, não um ícone abstrato):
+advogado = balança/martelo · dentista = dente com brilho · nutricionista = maçã/prato · academia = halter
+salão/estética = tesoura/secador · oficina = chave inglesa/engrenagem · restaurante = panela/talheres
+imobiliária = casa com chave · financeiro = moeda/gráfico subindo · pet = patinha · fotografia = câmera
+consulta = estetoscópio · online = notebook com check · local = pin de mapa · contato = balão de conversa
+
+PALETA: extraia 2 gradientes da marca do cliente + 2 cores de contraste fixas (dourado #ffd166 e um verde
+ou azul vivo). Varie o gradiente entre os ícones da mesma página para ficar colorido como um conjunto.
+
+NUNCA usar emoji, NUNCA usar ícone chapado/monocromático de biblioteca (o "padrão de IA").
+Abaixo, 12 exemplos prontos em nichos diferentes: use como base e desenhe variações.
 -->
 <style>
   body{font-family:Segoe UI,Arial,sans-serif;background:#f4f7f5;padding:30px;display:flex;gap:22px;flex-wrap:wrap}
@@ -109,6 +125,82 @@ NUNCA usar emoji, NUNCA usar ícone chapado de biblioteca. Desenhar variações 
   <circle cx="44" cy="12" r="2.6" fill="#34d399"/>
 </svg>
 </div>Palestra</div>
+
+<!-- 7. ADVOGADO / BALANÇA -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs><linearGradient id="g7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6bf5"/><stop offset="1" stop-color="#4c2ea8"/></linearGradient></defs>
+  <ellipse cx="32" cy="58" rx="16" ry="3.6" fill="#4c2ea8" opacity=".16"/>
+  <path d="M32 10v40M20 54h24" stroke="url(#g7)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M12 20h40" stroke="url(#g7)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M16 20l-6 14a8 8 0 0012 0zM48 20l-6 14a8 8 0 0012 0z" fill="url(#g7)" opacity=".9"/>
+  <circle cx="32" cy="10" r="4" fill="#ffd166"/>
+  <path d="M26 14c1-2 3-3 5-3" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".7" fill="none"/>
+</svg>
+</div>Justiça</div>
+
+<!-- 8. DENTISTA / DENTE -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs><linearGradient id="g8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#2b6cb0"/></linearGradient></defs>
+  <ellipse cx="32" cy="58" rx="16" ry="3.6" fill="#2b6cb0" opacity=".16"/>
+  <path d="M20 10c-8 0-10 10-6 18 3 6 4 12 5 20 .5 4 5 4 6 0l2-10c1-4 9-4 10 0l2 10c1 4 5.5 4 6 0 1-8 2-14 5-20 4-8 2-18-6-18-5 0-7 3-12 3s-7-3-12-3z" fill="url(#g8)"/>
+  <path d="M18 16c1-3 4-4 6-4" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".75" fill="none"/>
+  <path d="M44 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#ffd166"/>
+</svg>
+</div>Dente</div>
+
+<!-- 9. BELEZA / TESOURA -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs><linearGradient id="g9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9a8d4"/><stop offset="1" stop-color="#be185d"/></linearGradient></defs>
+  <ellipse cx="32" cy="58" rx="15" ry="3.4" fill="#be185d" opacity=".16"/>
+  <circle cx="18" cy="46" r="7" fill="none" stroke="url(#g9)" stroke-width="5"/>
+  <circle cx="46" cy="46" r="7" fill="none" stroke="url(#g9)" stroke-width="5"/>
+  <path d="M22 41L46 10M42 41L18 10" stroke="url(#g9)" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="32" cy="27" r="3" fill="#ffd166"/>
+  <path d="M14 42c1-2 3-3 5-3" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".7" fill="none"/>
+</svg>
+</div>Beleza</div>
+
+<!-- 10. OFICINA / CHAVE INGLESA -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs><linearGradient id="g10" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#94a3b8"/><stop offset="1" stop-color="#334155"/></linearGradient></defs>
+  <ellipse cx="32" cy="58" rx="17" ry="3.6" fill="#334155" opacity=".18"/>
+  <path d="M42 8a12 12 0 00-12 15L12 41a6 6 0 108 8l18-18a12 12 0 0015-12l-8 6-8-3-3-8z" fill="url(#g10)"/>
+  <circle cx="16" cy="45" r="3" fill="#ffd166"/>
+  <path d="M34 12c2-2 5-3 8-2" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".7" fill="none"/>
+  <circle cx="52" cy="46" r="2.6" fill="#34d399"/>
+</svg>
+</div>Oficina</div>
+
+<!-- 11. RESTAURANTE / PANELA -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs><linearGradient id="g11" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#b91c1c"/></linearGradient></defs>
+  <ellipse cx="32" cy="58" rx="18" ry="3.6" fill="#b91c1c" opacity=".16"/>
+  <path d="M14 30h36v10a12 12 0 01-12 12H26a12 12 0 01-12-12z" fill="url(#g11)"/>
+  <path d="M8 30h48" stroke="url(#g11)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M24 22c0-3 3-3 3-6M34 22c0-3 3-3 3-6" stroke="#94a3b8" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+  <path d="M18 34c1 4 3 7 6 9" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6" fill="none"/>
+  <circle cx="50" cy="16" r="3" fill="#ffd166"/>
+</svg>
+</div>Sabor</div>
+
+<!-- 12. FINANCEIRO / GRÁFICO -->
+<div class="box"><div class="ic">
+<svg width="60" height="60" viewBox="0 0 64 64">
+  <defs><linearGradient id="g12" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6ee7b7"/><stop offset="1" stop-color="#047857"/></linearGradient></defs>
+  <ellipse cx="32" cy="58" rx="17" ry="3.6" fill="#047857" opacity=".16"/>
+  <path d="M10 52h44" stroke="url(#g12)" stroke-width="5" stroke-linecap="round"/>
+  <rect x="14" y="36" width="8" height="12" rx="3" fill="url(#g12)" opacity=".75"/>
+  <rect x="27" y="28" width="8" height="20" rx="3" fill="url(#g12)" opacity=".9"/>
+  <rect x="40" y="18" width="8" height="30" rx="3" fill="url(#g12)"/>
+  <path d="M14 24l12-8 10 5 14-11" stroke="#ffd166" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M46 8l6 1-1 6" stroke="#ffd166" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
+</div>Resultados</div>
 
 </body>
 </html>
