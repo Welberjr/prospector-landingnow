@@ -33,8 +33,18 @@ Configurar o ambiente uma única vez. Tudo fica salvo em `prospector-landingnow.
 }
 ```
 
-6. **PAINEL (criar automaticamente, sem perguntar)**: copie `skills/catalogo/references/painel-template.html` do plugin para a pasta conectada como `painel.html`. É o painel de controle local do usuário: arquivo único, sem servidor e sem banco, com os dados embutidos. Explique: "Criei o seu painel: dê dois cliques em painel.html na sua pasta. Login: admin | Senha: 12345678". O visual e o login são padrão para todos.
-7. **Encerrar** explicando o ciclo: `/prospectar` acha os clientes, `/criar-site` monta a página, `/publicar` sobe no Cloudflare, `/proposta` entrega a mensagem de WhatsApp pronta.
+6. **PAINEL (criar automaticamente, logo após as respostas, sem perguntar nada)**: assim que o usuário confirmar o formulário, copie `skills/catalogo/references/painel-template.html` do plugin para a PASTA CONECTADA (a mesma que ele escolheu para os clientes) como `painel.html`. É o painel de controle local: arquivo único, sem servidor e sem banco, dados embutidos, funciona até sem internet. Visual e login são padrão para todos.
+7. **ENTREGAR O ACESSO (obrigatório, neste formato)**: a mensagem final do setup DEVE conter o bloco de acesso pronto, assim:
+
+   Seu painel está pronto! Pra abrir, é só dar dois cliques no arquivo:
+
+   Arquivo: painel.html (dentro da sua pasta "[nome da pasta conectada]")
+   Usuário: admin
+   Senha: 12345678
+
+   Ele vai se atualizar sozinho a cada etapa do trabalho: clientes catalogados, sites criados com o link, mensagens enviadas e negócios fechados.
+
+8. **Encerrar** explicando o ciclo: `/catalogo` monta a fila de clientes, `/startlp` produz na ordem (você escolhe quantos), e o painel acompanha tudo.
 
 ## Regras
 
