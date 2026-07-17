@@ -75,8 +75,10 @@
   .card h3{font-size:1.2rem;margin-bottom:10px}
   .card p{color:var(--cinza);font-size:.98rem}
 
-  /* AMBIENTE */
-  .ambiente{position:relative;min-height:330px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+  /* FAIXA DESTAQUE (degradê nas cores da marca; foto de fundo SÓ se houver imagem larga e de qualidade) */
+  .ambiente{position:relative;min-height:280px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(140deg,var(--verde-esc),var(--verde) 55%,#12a06d)}
+  .ambiente:before{content:"";position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 66%);border-radius:50%}
+  .ambiente:after{content:"";position:absolute;bottom:-120px;left:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(232,185,35,.22),transparent 66%);border-radius:50%}
   .ambiente img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .ambiente .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,35,26,.86),rgba(10,95,66,.62))}
   .ambiente .txt{position:relative;max-width:720px;padding:58px 22px}
@@ -241,8 +243,9 @@
 </section>
 
 <section class="ambiente">
-  <img src="img/hero.png" alt="Recepção da Clínica Nutrit em Águas Claras">
-  <div class="ov"></div>
+  <!-- REGRA: por padrão esta faixa NÃO leva foto (o degradê da marca resolve para qualquer cliente).
+       Só acrescente <img src="img/ambiente.jpg"> + <div class="ov"></div> aqui se o cliente tiver
+       foto de ambiente LARGA (1000px+) e de boa qualidade. Foto ruim degrada a página inteira. -->
   <div class="txt">
     <h2>Um espaço pensado para o seu <span style="color:#d9f99d">bem estar</span></h2>
     <p>Ambiente acolhedor e confortável no Águas Claras Shopping, para você se sentir bem cuidada em cada consulta.</p>

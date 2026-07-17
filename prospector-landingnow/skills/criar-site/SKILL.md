@@ -27,6 +27,7 @@ Estética:
 - Cards com bordas bem arredondadas e conteúdo centralizado.
 - Efeito neon em volta dos cards de destaque, sobre fundo escuro.
 - Rodapé centralizado (logo, navegação, redes).
+- Faixa de destaque do meio da página: SEMPRE com degradê nas cores da marca (fica bom em qualquer cliente). Foto de fundo nessa faixa é exceção: só com imagem de ambiente larga (1000px+) e nítida. Foto pequena, escura ou esticada nunca entra como fundo.
 
 Mobile (sempre otimizado):
 - 100% responsivo, pensado primeiro no celular.
