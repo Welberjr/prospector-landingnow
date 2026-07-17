@@ -17,6 +17,7 @@ Executar a esteira inteira, do primeiro cliente à mensagem pronta, parando só 
    - Execute a skill `publicar` (Cloudflare, com a checagem de conta e validação).
    - Execute a skill `proposta` (mensagem de WhatsApp salva e exibida).
 5. **Entrega final**: apresente um resumo único com, por cliente: nome, URL nova no ar, link `wa.me` da conversa e a mensagem pronta. Atualize `leads.md` com tudo.
+6. **Oferta de envio**: pergunte "Tenho [N] mensagens prontas: [nomes]. Posso enviar pelo seu WhatsApp? Responda Sim." Se o usuário responder Sim, execute a skill `enviar` (WhatsApp Web, 1 a 1, com os limites de proteção). Se não, encerre com as mensagens à disposição.
 
 ## Regras
 
