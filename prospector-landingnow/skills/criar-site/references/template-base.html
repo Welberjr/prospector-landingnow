@@ -199,10 +199,10 @@
     .planos .plano:nth-child(4){top:136px}
     .planos .plano:nth-child(5){top:152px}
     .planos .plano:nth-child(6){top:168px}
-    /* no mobile: 2 colunas em cima e "Onde estamos" embaixo, largura toda */
-    .foot-cols{grid-template-columns:repeat(2,1fr);gap:18px 12px}
+    /* no mobile: Navegue enxuta + Contato com o resto (e-mail inteiro), "Onde estamos" embaixo */
+    .foot-cols{grid-template-columns:auto minmax(0,1fr);gap:18px 24px}
     .foot-cols > div:nth-child(3){grid-column:1 / -1;text-align:center}
-    .foot-cols ul{font-size:.84rem}
+    .foot-cols ul{font-size:.82rem}
     .conv{grid-template-columns:repeat(2,1fr)}
     footer{padding-bottom:104px}
   }
