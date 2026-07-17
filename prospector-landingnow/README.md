@@ -5,15 +5,16 @@ Plugin para Claude (Cowork / Claude Code) que roda o ciclo completo de prospecç
 **Achou → Criou → Publicou → Ofertou pelo WhatsApp.**
 
 1. `/setup`: um formulário rápido no chat (nome, WhatsApp, preço, nichos, conta Cloudflare). Preencheu, salvou, nunca mais mexe.
-2. `/startlp`: o comando mágico. Roda tudo sozinho: prospecta no nicho que você escolher, cria as páginas, publica e te entrega as mensagens prontas.
+2. `/catalogo`: monta a sua fila de clientes. Prospecta em volume, cataloga tudo numa tabela ranqueada (melhor avaliação + pior site primeiro) e vai acumulando a cada rodada. Você enxerga a fila inteira antes de produzir.
+3. `/startlp`: a produção. Ele pergunta quantos você quer (3, 5, quantos escolher), produz os primeiros da fila na ordem, publica e te entrega as mensagens prontas. Enviou, ganha o check na tabela. Pediu "mais", ele continua do ponto exato onde parou.
 
 Ou, se preferir por etapas:
 
-3. `/prospectar`: você escolhe o nicho na hora e ele busca negócios bem avaliados com sites fracos e WhatsApp público.
-4. `/criar-site`: cria a página nova no padrão LandingNow: fotos e logo reais do cliente, cards arredondados com neon, favicon, preview de WhatsApp e mobile impecável.
-5. `/publicar`: sobe no Cloudflare Pages (HTTPS grátis, URL `nome.pages.dev`) e valida.
-6. `/proposta`: entrega a mensagem de WhatsApp pronta, com o preço configurado, e o link da conversa do cliente.
-7. `/enviar`: o Claude envia as mensagens pelo SEU WhatsApp Web, uma a uma. Antes de sair qualquer coisa, ele mostra a lista e pergunta "Posso enviar? Responda Sim". Você digita Sim e ele dispara, na quantidade que você escolheu.
+4. `/prospectar`: você escolhe o nicho na hora e ele busca negócios bem avaliados com sites fracos e WhatsApp público.
+5. `/criar-site`: cria a página nova no padrão LandingNow: fotos e logo reais do cliente, cards arredondados com neon, favicon, preview de WhatsApp e mobile impecável.
+6. `/publicar`: sobe no Cloudflare Pages (HTTPS grátis, URL `nome.pages.dev`) e valida.
+7. `/proposta`: entrega a mensagem de WhatsApp pronta, com o preço configurado, e o link da conversa do cliente.
+8. `/enviar`: o Claude envia as mensagens pelo SEU WhatsApp Web, uma a uma. Antes de sair qualquer coisa, ele mostra a lista e pergunta "Posso enviar? Responda Sim". Você digita Sim e ele dispara, na quantidade que você escolheu.
 
 ## Como funciona o envio (leia antes de usar o /enviar)
 

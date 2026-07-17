@@ -29,7 +29,7 @@ Nome, cidade, site atual, motivo objetivo, e **WhatsApp no formato 55 + DDD + n�
 
 ## Saída
 
-Mantenha `leads.md` na pasta conectada:
+O destino principal é o CATÁLOGO (`catalogo.md`, skill `catalogo`): acrescente os leads qualificados lá, ranqueados, sem duplicar. Se o usuário estiver usando o fluxo antigo, mantenha `leads.md`:
 
 ```markdown
 | # | Nome | Cidade | WhatsApp | Site atual | Motivo | Status | URL nova |
