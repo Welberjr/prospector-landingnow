@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Nutrit | Nutrição e Psicologia em Águas Claras, Brasília</title>
+<meta name="description" content="Clínica de nutrição e psicologia em Águas Claras, Brasília. Atendimento personalizado com a nutricionista Selma Nascimento, planos para cada fase da vida e cuidado integral.">
+<link rel="icon" href="/favicon.ico?v=3" sizes="any">
+<link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png?v=3">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=3">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://clinica-nutrit.pages.dev/">
+<meta property="og:title" content="Clínica Nutrit | Nutrição e Psicologia em Águas Claras">
+<meta property="og:description" content="Atendimento nutricional e psicológico personalizado em Águas Claras, Brasília. Planos para cada fase da vida.">
+<meta property="og:image" content="https://clinica-nutrit.pages.dev/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clínica Nutrit | Nutrição e Psicologia em Águas Claras">
+<meta name="twitter:description" content="Atendimento nutricional e psicológico personalizado em Águas Claras, Brasília.">
+<meta name="twitter:image" content="https://clinica-nutrit.pages.dev/img/og-image.jpg">
+<style>
+  :root{
+    --verde:#0f8a5f; --verde-esc:#0a5f42; --verde-claro:#e7f6ee;
+    --lima:#8fe04a; --neon:#a3ff5e; --dourado:#e8b923; --fundo:#f4f9f6;
+    --texto:#16241d; --cinza:#5b6b63; --branco:#ffffff;
+    --sombra:0 18px 45px rgba(12,74,52,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.65;overflow-x:hidden}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+  section{padding:72px 0}
+  h2{font-size:2.05rem;font-weight:800;text-align:center;line-height:1.2;margin-bottom:12px}
+  h2 span{color:var(--verde)}
+  .sub{text-align:center;color:var(--cinza);max-width:640px;margin:0 auto 44px;font-size:1.04rem}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--verde),var(--verde-esc));color:#fff;font-weight:700;padding:13px 26px;border-radius:40px;box-shadow:0 10px 24px rgba(15,138,95,.32);transition:transform .18s,box-shadow .18s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(15,138,95,.45)}
+  .btn.gold{background:linear-gradient(135deg,var(--dourado),#c9971a);box-shadow:0 10px 24px rgba(201,151,26,.34);color:#20241d}
+  .btn.ghost{background:rgba(255,255,255,.16);box-shadow:none}
+
+  header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #e4efe9}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .nav .brand img{height:44px;width:auto}
+  .nav-links{display:flex;gap:26px;font-weight:600;font-size:.95rem}
+  .nav-links a:hover{color:var(--verde)}
+  .nav .btn{padding:11px 20px;font-size:.92rem}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(150deg,#0a5f42 0%,#0f8a5f 60%,#12a06d 100%);color:#fff;overflow:hidden}
+  .hero:before{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(143,224,74,.4),transparent 68%);border-radius:50%}
+  .hero:after{content:"";position:absolute;bottom:-140px;left:-90px;width:360px;height:360px;background:radial-gradient(circle,rgba(232,185,35,.26),transparent 66%);border-radius:50%}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:32px 22px 58px}
+  .hero .selo{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:7px 15px;border-radius:40px;font-size:.85rem;font-weight:600;margin-bottom:20px}
+  .hero h1{font-size:2.7rem;line-height:1.13;font-weight:800;margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:#d9f99d}
+  .hero p.lead{font-size:1.1rem;color:#e8f6ef;margin-bottom:28px;max-width:520px;text-align:justify}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px;max-width:540px}
+  .feats span{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;font-size:.84rem;color:#eafff0;font-weight:600;line-height:1.25}
+  .hero-foto{position:relative;justify-self:center}
+  .hero-foto .ring{position:relative;padding:10px;border-radius:26px;background:linear-gradient(135deg,var(--neon),var(--verde) 55%,#0a5f42);box-shadow:0 0 26px rgba(143,224,74,.55),0 0 60px rgba(143,224,74,.25)}
+  .hero-foto img{border-radius:18px;width:300px;max-width:74vw;display:block}
+  .hero-foto .cred{position:absolute;left:-14px;bottom:20px;background:#fff;color:var(--verde-esc);border-radius:14px;padding:12px 16px;box-shadow:var(--sombra)}
+  .hero-foto .cred strong{display:block;font-size:1.02rem}
+  .hero-foto .cred span{font-size:.82rem;color:var(--cinza)}
+
+  /* DIFERENCIAIS */
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:var(--branco);border-radius:22px;padding:30px 26px;box-shadow:var(--sombra);border-top:4px solid var(--verde);transition:transform .2s;text-align:center}
+  .card:hover{transform:translateY(-6px)}
+  .card img{width:82px;height:82px;object-fit:contain;margin:0 auto 16px}
+  .card h3{font-size:1.2rem;margin-bottom:10px}
+  .card p{color:var(--cinza);font-size:.98rem}
+
+  /* AMBIENTE */
+  .ambiente{position:relative;min-height:330px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+  .ambiente img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .ambiente .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,35,26,.86),rgba(10,95,66,.62))}
+  .ambiente .txt{position:relative;max-width:720px;padding:58px 22px}
+  .ambiente h2{color:#fff}
+  .ambiente p{color:#e2f4ea;font-size:1.05rem}
+
+  /* FORMACAO */
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .form-txt h2{text-align:left}
+  .form-txt p{color:var(--cinza);text-align:justify;margin-bottom:16px}
+  .selos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:560px;margin-top:6px}
+  .selos div{background:#fff;border:1px solid #dcece4;border-radius:14px;padding:12px;font-size:.85rem;font-weight:600;color:var(--verde-esc);box-shadow:0 6px 16px rgba(12,74,52,.06);text-align:center;display:flex;align-items:center;justify-content:center;min-height:54px}
+  .form-nums{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .num-card{background:linear-gradient(150deg,var(--verde),var(--verde-esc));color:#fff;border-radius:20px;padding:24px 18px;box-shadow:var(--sombra);text-align:center}
+  .num-card b{display:block;font-size:1.9rem;line-height:1;margin-bottom:4px}
+  .num-card.local b{font-size:1.3rem}
+  .num-card span{font-size:.9rem;color:#d9f2e6}
+
+  /* PLANOS NEON */
+  .planos-sec{background:radial-gradient(1200px 500px at 50% -10%,#0e3a2a,#06231a 70%)}
+  .planos-sec h2{color:#fff}
+  .planos-sec h2 span{color:var(--neon)}
+  .planos-sec .sub{color:#a9c9ba}
+  .planos{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .plano{position:relative;background:#0b2c20;border-radius:22px;overflow:hidden;border:1px solid rgba(143,224,74,.32);box-shadow:0 0 0 1px rgba(143,224,74,.12),0 0 20px rgba(143,224,74,.16);transition:transform .22s,box-shadow .22s}
+  .plano:hover{transform:translateY(-8px);box-shadow:0 0 0 1px rgba(143,224,74,.7),0 0 26px rgba(143,224,74,.55),0 0 60px rgba(143,224,74,.28)}
+  .plano .capa{position:relative;height:150px;overflow:hidden}
+  .plano .capa img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+  .plano:hover .capa img{transform:scale(1.06)}
+  .plano .capa .tag{position:absolute;top:12px;left:50%;transform:translateX(-50%);background:rgba(6,35,26,.82);color:var(--neon);border:1px solid rgba(143,224,74,.5);font-weight:700;font-size:.74rem;padding:5px 13px;border-radius:30px;backdrop-filter:blur(4px);white-space:nowrap}
+  .plano .corpo{padding:22px;text-align:center}
+  .plano.destaque{border-color:rgba(232,185,35,.6);box-shadow:0 0 0 1px rgba(232,185,35,.25),0 0 22px rgba(232,185,35,.22)}
+  .plano.destaque:hover{box-shadow:0 0 0 1px rgba(232,185,35,.8),0 0 26px rgba(232,185,35,.55),0 0 60px rgba(232,185,35,.3)}
+  .plano.destaque .tag{color:var(--dourado);border-color:rgba(232,185,35,.6)}
+  .plano h3{color:#eafff0;font-size:1.22rem;margin-bottom:8px}
+  .plano p{color:#bcd8c9;font-size:.95rem;margin-bottom:16px}
+  .plano a.mini{display:inline-flex;align-items:center;justify-content:center;gap:7px;color:var(--neon);font-weight:700;font-size:.9rem}
+  .plano a.mini:hover{gap:11px}
+
+  /* PSICOLOGIA + CONVENIOS */
+  .psi .faixa{background:linear-gradient(135deg,#0a5f42,#0f8a5f);color:#fff;border-radius:26px;padding:44px 34px;box-shadow:var(--sombra);text-align:center}
+  .psi .faixa h3{font-size:1.7rem;margin-bottom:14px}
+  .psi .faixa p{color:#e2f4ea;max-width:680px;margin:0 auto;text-align:justify}
+  .conv{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:780px;margin:26px auto 0}
+  .conv span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);border-radius:14px;padding:10px 6px;font-size:.8rem;font-weight:600;text-align:center;display:flex;align-items:center;justify-content:center;min-height:46px}
+
+  /* CONTATO */
+  .contato{background:linear-gradient(180deg,#eef7f2,#fff)}
+  .contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .info-card{background:#fff;border-radius:22px;padding:34px;box-shadow:var(--sombra)}
+  .info-card h3{font-size:1.3rem;margin-bottom:20px;text-align:center}
+  .info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+  .info-item .ico{width:44px;height:44px;border-radius:12px;background:var(--verde-claro);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .info-item b{display:block;font-size:.98rem}
+  .info-item span{color:var(--cinza);font-size:.92rem}
+  .redes{display:flex;gap:12px;justify-content:center;margin-top:6px}
+  .redes a{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--verde-claro);transition:transform .18s,background .18s}
+  .redes a:hover{transform:translateY(-3px);background:#d5efe1}
+  .mapa{background:linear-gradient(150deg,var(--verde-esc),var(--verde));border-radius:22px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;padding:40px;text-align:center;box-shadow:var(--sombra)}
+  .mapa h3{font-size:1.5rem;margin-bottom:10px}
+  .mapa p{color:#e2f4ea;margin-bottom:22px}
+
+  /* RODAPE (centralizado) */
+  footer{background:#08281d;color:#c8d8d0;padding:38px 0 42px}
+  .foot{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+  .foot .chip{background:#fff;border-radius:14px;padding:10px 16px}
+  .foot .chip img{height:36px;width:auto}
+  .foot .fnav{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;font-size:.9rem}
+  .foot .fnav a:hover{color:var(--neon)}
+  .foot small{max-width:560px;color:#8aa093;border-top:1px solid #133a2c;padding-top:18px;font-size:.82rem}
+
+  /* WHATSAPP FLUTUANTE */
+  .zap{position:fixed;bottom:22px;right:22px;z-index:80;background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(37,211,102,.5);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:34px;text-align:center}
+    .hero p.lead{text-align:justify;margin-left:auto;margin-right:auto}
+    .hero .cta-row,.hero .selo{justify-content:center}
+    .feats{margin-left:auto;margin-right:auto}
+    .hero .selo{margin-left:auto;margin-right:auto}
+    .form-grid{grid-template-columns:1fr}
+    .form-txt h2{text-align:center}
+    .contato-grid{grid-template-columns:1fr}
+    .conv{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:640px){
+    section{padding:52px 0}
+    h2{font-size:1.62rem}
+    .hero h1{font-size:2.05rem}
+    .nav-links{display:none}
+    .hero .cta-row{flex-wrap:nowrap}
+    .hero .cta-row .btn{flex:1;padding-left:14px;padding-right:14px;font-size:.95rem;text-align:center}
+    .cards3,.planos{grid-template-columns:1fr}
+    .conv{grid-template-columns:repeat(2,1fr)}
+    .card{max-width:460px;margin:0 auto}
+    .plano{max-width:420px;margin:0 auto}
+    footer{padding-bottom:104px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#topo"><img src="img/logo.png" alt="Clínica Nutrit, nutrição e psicologia"></a>
+    <nav class="nav-links">
+      <a href="#dif">Diferenciais</a>
+      <a href="#formacao">Profissional</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
+  </div>
+</header>
+
+<section class="hero" id="topo">
+  <div class="wrap">
+    <div>
+      <span class="selo">Nutrição e Psicologia em Águas Claras, Brasília</span>
+      <h1>Cuide da sua saúde de forma <em>completa</em>, com quem olha você por inteiro</h1>
+      <p class="lead">Atendimento nutricional e psicológico personalizado, com planos pensados para cada fase da sua vida. Qualidade premium, pertinho de você, no Águas Claras Shopping.</p>
+      <div class="cta-row">
+        <a class="btn gold" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
+        <a class="btn ghost" href="#planos">Ver os planos</a>
+      </div>
+      <div class="feats">
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#a3ff5e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Atendimento particular</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#a3ff5e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Avulsas ou pacotes</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#a3ff5e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Presencial e acolhedor</span>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <div class="ring"><img src="img/selma.png" alt="Selma Nascimento, nutricionista da Clínica Nutrit"></div>
+      <div class="cred"><strong>Selma Nascimento</strong><span>Nutricionista, CRN/DF 10556</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="dif">
+  <div class="wrap">
+    <h2>O cuidado que faz a <span>diferença</span></h2>
+    <p class="sub">Mais do que uma dieta, um acompanhamento que respeita a sua rotina, os seus objetivos e o seu bem estar.</p>
+    <div class="cards3">
+      <div class="card">
+        <img src="img/dif-cuidado.png" alt="Cuidado personalizado">
+        <h3>Somos cuidadosas</h3>
+        <p>Cada atendimento é feito com atenção e escuta de verdade. Você recebe um plano sob medida, com qualidade premium do começo ao fim.</p>
+      </div>
+      <div class="card">
+        <img src="img/dif-integral.png" alt="Visão integral da saúde">
+        <h3>Olhamos o todo</h3>
+        <p>Cuidamos da sua saúde, do seu bem estar e da sua qualidade de vida de forma integrada, unindo nutrição e psicologia num mesmo lugar.</p>
+      </div>
+      <div class="card">
+        <img src="img/dif-localizacao.png" alt="Fácil localização em Águas Claras">
+        <h3>Estamos pertinho</h3>
+        <p>Localização fácil no Águas Claras Shopping, com amplo estacionamento e a poucos passos do metrô. Vir cuidar de você ficou simples.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ambiente">
+  <img src="img/hero.png" alt="Recepção da Clínica Nutrit em Águas Claras">
+  <div class="ov"></div>
+  <div class="txt">
+    <h2>Um espaço pensado para o seu <span style="color:#d9f99d">bem estar</span></h2>
+    <p>Ambiente acolhedor e confortável no Águas Claras Shopping, para você se sentir bem cuidada em cada consulta.</p>
+  </div>
+</section>
+
+<section id="formacao">
+  <div class="wrap form-grid">
+    <div class="form-txt">
+      <h2>Experiência e formação a <span>serviço da sua saúde</span></h2>
+      <p>A nutricionista Selma Nascimento é pós-graduada em Nutrição Clínica e Oncológica, com especialização em emagrecimento avançado e saúde da mulher. Graduada em Nutrição pela Universidade Católica de Brasília, une conhecimento técnico e um olhar acolhedor para cada paciente.</p>
+      <p>Tem formação também em fitoterapia e suplementação, nutrição esportiva, nutrição clínica funcional, nutrição materno infantil e cuidado com obesidade e cirurgia bariátrica. Uma base sólida para orientar você com segurança em cada etapa.</p>
+      <div class="selos">
+        <div>Nutrição clínica e oncológica</div>
+        <div>Emagrecimento avançado</div>
+        <div>Saúde da mulher</div>
+        <div>Nutrição esportiva</div>
+      </div>
+    </div>
+    <div class="form-nums">
+      <div class="num-card"><b>6</b><span>planos para cada fase da vida</span></div>
+      <div class="num-card"><b>2</b><span>áreas no mesmo lugar, nutrição e psicologia</span></div>
+      <div class="num-card"><b>100%</b><span>atendimento personalizado</span></div>
+      <div class="num-card local"><b>Águas Claras</b><span>Shopping, com estacionamento amplo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="planos-sec" id="planos">
+  <div class="wrap">
+    <h2>Planos para <span>cada fase da vida</span></h2>
+    <p class="sub">Consultorias nutricionais preparadas para atender você de forma especializada, do primeiro passo ao resultado.</p>
+    <div class="planos">
+      <div class="plano destaque">
+        <div class="capa"><span class="tag">Mais procurado</span><img src="img/mulher40.png" alt="Plano Mulher 40+"></div>
+        <div class="corpo"><h3>Mulher 40+</h3><p>Se você tem 40 anos ou mais, recupere a energia, emagreça com saúde e volte a se sentir você mesma.</p><a class="mini" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Mulher%2040%2B." target="_blank" rel="noopener">Quero este plano &rarr;</a></div>
+      </div>
+      <div class="plano">
+        <div class="capa"><span class="tag">Adultos</span><img src="img/vocemelhor.png" alt="Plano Você Melhor"></div>
+        <div class="corpo"><h3>Você Melhor</h3><p>Emagreça e cuide da sua saúde de forma consistente, respeitando a sua rotina profissional, acadêmica e familiar.</p><a class="mini" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Voc%C3%AA%20Melhor." target="_blank" rel="noopener">Quero este plano &rarr;</a></div>
+      </div>
+      <div class="plano">
+        <div class="capa"><span class="tag">Homens</span><img src="img/homemtop.png" alt="Plano Homem Top"></div>
+        <div class="corpo"><h3>Homem Top</h3><p>Sinta-se bem e invista na sua longevidade com um acompanhamento que considera todos os ciclos da sua vida.</p><a class="mini" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Homem%20Top." target="_blank" rel="noopener">Quero este plano &rarr;</a></div>
+      </div>
+      <div class="plano">
+        <div class="capa"><span class="tag">Infantil</span><img src="img/nutritkids.png" alt="Plano Nutrit Kids"></div>
+        <div class="corpo"><h3>Nutrit Kids</h3><p>Uma alimentação boa e equilibrada é fundamental para o crescimento saudável dos seus pequenos.</p><a class="mini" href="https://wa.me/5561991167868?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Nutrit%20Kids." target="_blank" rel="noopener">Quero este plano &rarr;</a></div>
+      </div>
+      <div class="plano">
+        <div class="capa"><span class="tag">Adolescentes</span><img src="img/nutritteens.png" alt="Plano Nutrit Teens"></div>
+        <di

@@ -1,0 +1,16 @@
+{
+  "name": "prospector-landingnow",
+  "version": "1.0.0",
+  "description": "COMECE PELO /setup (2 min, uma vez só). Prospecção e venda de landing pages: encontra negócios bem avaliados com sites fracos, cria a página nova no padrão LandingNow (favicon, preview de WhatsApp, mobile impecável), publica no Cloudflare Pages via Wrangler e entrega a mensagem de WhatsApp pronta com o preço, para você só copiar e enviar ao cliente.",
+  "author": {
+    "name": "Welber Junior (LandingNow)"
+  },
+  "homepage": "https://landingnow.com.br",
+  "keywords": [
+    "prospeccao",
+    "landing-page",
+    "cloudflare",
+    "whatsapp",
+    "vendas"
+  ]
+}

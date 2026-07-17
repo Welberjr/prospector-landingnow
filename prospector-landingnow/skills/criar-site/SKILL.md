@@ -1,0 +1,52 @@
+---
+name: criar-site
+description: Cria a landing page nova de um lead no padrão LandingNow. Acione quando o usuário rodar /criar-site, disser "criar o site", "montar a landing page", "redesenhar o site do cliente" ou pedir a página de um lead prospectado.
+---
+
+# Criar a landing page (padrão LandingNow)
+
+Construir a versão nova e premium da página do cliente, mantendo o conteúdo, a logo e as fotos REAIS dele. O arquivo de referência `references/template-base.html` é uma página aprovada neste padrão: use como base visual e estrutural, trocando conteúdo, cores e imagens para a identidade de cada cliente.
+
+## Passos
+
+1. Leia o site atual do lead (web_fetch) e extraia: textos, serviços, contatos, redes sociais e as URLs das imagens (logo, foto do profissional, ambientes, serviços). Se o HTML esconder as imagens (lazy-load), use um subagente para varrer o conteúdo salvo.
+2. Baixe as imagens reais para `clientes/[slug]/img/` na pasta conectada (via PowerShell `Invoke-WebRequest` no Windows ou `curl` no Mac). Nunca referencie imagem por link http do site antigo dentro da página nova.
+3. Monte `clientes/[slug]/index.html` seguindo o checklist abaixo, adaptando a paleta de cores à identidade do cliente.
+4. Gere favicon e imagem de preview (ver seção Favicon e Preview).
+5. Confira o checklist inteiro antes de entregar e atualize o status do lead em `leads.md` para `site-criado`.
+
+## Checklist obrigatório (não pule nenhum item)
+
+Texto:
+- NUNCA usar travessões (o traço longo). Vírgula, ponto ou parênteses no lugar.
+- Parágrafos justificados. Títulos centralizados no mobile.
+- Reescrever o conteúdo do cliente com outras palavras, mantendo o sentido.
+
+Estética:
+- Visual moderno, cores vivas adaptadas à marca do cliente, alto contraste.
+- Cards com bordas bem arredondadas e conteúdo centralizado.
+- Efeito neon em volta dos cards de destaque, sobre fundo escuro.
+- Rodapé centralizado (logo, navegação, redes).
+
+Mobile (sempre otimizado):
+- 100% responsivo, pensado primeiro no celular.
+- Cards e tags em grade alinhada (2 por linha, 2x2, lado a lado). Nunca empilhados e soltos.
+- Botões da primeira dobra lado a lado, nunca empilhados.
+- Sem poluição de botões (um CTA de WhatsApp no hero basta, mais o flutuante).
+- Botão flutuante do WhatsApp com espaço extra no rodapé para não cobrir texto.
+
+Contato:
+- Botão flutuante e CTAs em `wa.me/55DDDNUMERO` com mensagem pré-preenchida.
+- Redes sociais reais do cliente no contato e no rodapé.
+
+## Favicon e Preview (obrigatórios)
+
+- Favicon gerado da logo do cliente, em ícone arredondado: `favicon.ico` na raiz + `img/favicon.png` (64px) + `img/apple-touch-icon.png` (180px). Referenciar com `?v=1` (e incrementar a cada atualização, para furar o cache).
+- Preview de WhatsApp: `img/og-image.jpg` de 1200x630 (logo, foto real e um botão "Agende sua consulta" desenhado), mais as meta tags `og:title`, `og:description`, `og:image` (URL absoluta do domínio final), `og:image:width/height` e `twitter:card`. Nunca deixar o preview vazio.
+- Gere as imagens com Python + Pillow (`pip install pillow --break-system-packages` se faltar).
+
+## Validação final
+
+- `grep` por travessões no HTML: precisa dar zero.
+- Conferir que toda imagem referenciada existe em `img/`.
+- Revisar mentalmente o mobile: grades 2x2, botões lado a lado, nada empilhado.

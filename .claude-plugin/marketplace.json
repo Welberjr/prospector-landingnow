@@ -1,0 +1,13 @@
+{
+  "name": "welberjr-plugins",
+  "owner": {
+    "name": "Welber Junior"
+  },
+  "plugins": [
+    {
+      "name": "prospector-landingnow",
+      "source": "./prospector-landingnow",
+      "description": "Prospecção e venda de landing pages: encontra negócios com sites fracos, cria a página no padrão LandingNow, publica no Cloudflare Pages e gera a mensagem de WhatsApp com preço."
+    }
+  ]
+}
